@@ -1,0 +1,172 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("tlo.jpg");
+    background-attachment: fixed;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#kontener{
+    width:1000px;
+    margin: 0px auto;
+    text-align:left;
+    background-color:whitesmoke;
+    border: 1px solid black;
+}
+#stopka{
+    background-color:rgb(22, 82, 22);
+    border-left: 1px solid black;
+}
+#stopka h1{
+    margin-top:0;
+    margin-right:90px;
+    text-align:right;
+}
+
+#navigation ul, #navigation li{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+#navigation a{
+    background-color:rgb(22, 82, 22);
+    text-decoration:none;
+    font:14px ;
+    text-indent: 10px;
+    border:1px solid black;
+    margin:0px;
+    padding:0px;color:white;
+    font-weight: 200;
+}
+#navigation a:hover{
+    background-color:rgb(62, 99, 62);
+    border: 1px solid grey;
+    background-color: rgb(54, 52, 52);
+    color: white;
+}
+#navigation .stack >a{
+    background-image: url(arrow.png);
+    background-repeat:no-repeat;
+    background-position: 97% 8px;
+
+}
+#navigation .stack > a.hover{
+    background-position: 97% -78px;
+}
+#navigation ul .stack >a {
+    background-position: 97% -21px;
+}
+#navigation ul .stack > a:hover{
+    background-position: 97% -54px;
+}
+#stopka{
+    text-align: right;
+
+}
+#mapa{
+    margin: 50px;
+    text-align: left;
+
+}
+#mapa p{
+    text-align:justify;
+    margin:10px;
+}
+#formularz{
+    text-align:right;
+    margin-right:100px;
+    margin-bottom: 50px;
+}
+#button-mapa{
+    padding: 10px 25px;
+    margin:10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(22, 82, 22);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+#button-mapa:hover{
+    background-color:#3e8e41;
+    color: black;
+}
+#button-mapa:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#submit{
+    padding: 10px 25px;
+    margin:10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(22, 82, 22);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+#submit:hover{
+    background-color:#3e8e41;
+    color: black;
+}
+#submit:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#button-sweet{
+    padding: 10px 25px;
+    margin:10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(22, 82, 22);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+#button-sweet:hover{
+    background-color:#3e8e41;
+    color: black;
+}
+#button-sweet:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#cancel{
+    padding: 10px 25px;
+    margin:10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(22, 82, 22);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+#cancel:hover{
+    background-color:#3e8e41;
+    color: black;
+}
+#cancel:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#sowa{
+ margin-top: 50px;
+ margin-left: 50px;
+}
+

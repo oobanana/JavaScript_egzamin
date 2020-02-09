@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Strona PB</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="nav1.1.min.js"></script>
+
+        <script src="skrypt.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $("#navigation").navPlugin({
+                    'itemWidth':250,
+                    'itemHeight':35,
+                    'navEffect':"slide",
+                    'speed':250
+                });
+            });
+
+            </script>
+    </head>
+
+    <body>
+         <div id="kontener">
+             <div id="stopka">
+                <h1>Strona Politechniki Białostockiej<img src="pb.png" width="20%"></h1>
+             </div>
+             <div id="menu">
+                <ul id="navigation">
+                    <li><a href="#">Wydziały</a>
+                        <ul>
+                            <li><a href="#">Architektury</a></li>
+                            <li><a href="#">Budownictwa i Nauk o Środowisku</a></li>
+                            <li><a href="#">Mechaniczny</a></li>
+                            <li><a href="#">Elektryczny</a></li>
+                            <li><a href="#">Informatyki</a></li>
+                            <li><a href="#">Inżynierii Zarządzania</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">O nas</a>
+                        <ul>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Studenci</a></li>
+                            <li><a href="#">Pracownicy</a></li>
+                            <li><a href="#">Historia uczelni</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Kalendarz wydarzeń</a></li>
+                    <li><a href="#">Ustawienia</a>
+                        <ul>
+                            <li><a href="#">Zmiana języka</a></li>
+                            <li><a href="#">Zarządzanie profilem</a></li>
+                            <li><a href="#">Pomoc</a></li>
+                        </ul></li>
+                <ul> 
+             </div>
+
+             <div id="srodek">
+                 <div id="mapa">
+                    <h2>Mapa</h2><img src="mapa.png" width="50%" style="float:left"><p>Politechnika Białostocka jest największą uczelnią techniczną północno-wschodniej Polski, kształci na 6 wydziałach. Według ogólnoświatowego rankingu szkół wyższych Webometrics Ranking of World Universities ze stycznia 2013, opracowanego przez hiszpański instytut Consejo Superior de Investigaciones Científicas uczelnia zajmuje 6. miejsce w Polsce wśród uczelni technicznych, a na świecie 1820. pośród wszystkich typów uczelni.</p>
+                    <p style="font-weight: bold">POLITECHNIKA BIAŁOSTOCKA</p>
+                    <p>ul. Wiejska 45A, 15-351 Białystok</p>
+                    <button id="button-mapa" >Otwórz w Google Maps</button>
+                 </div>
+                 <div id="formularz">
+                     <img id="sowa" src="owl.png" style="float:left">
+                    <h2>Zarejestruj się</h2>
+                    <form action="#" method="get" class="form form-horizontal" name="user_form">
+                        <p id= "message"  class="alert-error" style="width:100%" ></p>
+                        <p><label>Imię </label><input type="text" id="username" name="user_name"></p>  <p><label>Nazwisko </label><input type="text" id="surname" name="sur_name"></p> 
+                        <p><label>Login </label><input type="text" id="login" name="log"></p>
+                        <p><label>Hasło  </label><input type="password" id="password" name="pass"></p>
+                        <p><lable>Adres </lable><input type="text" id="address" name="add"></p>
+                        <p><label>Kod Pocztowy </label><input type="text" id="postal_code" name="postal_code" pattern="[0-9]{2}-[0-9]{3}" placeholder="xx-xxx"/></p>
+                        <p><label>Email </label><input type="text" id="email" name="email"/></p>
+                        <br>
+                        <p><input type="checkbox" name="zgoda">Wyrażam zgode na przetważanie moich danych</p>
+                        <button id="cancel">Anuluj</button>
+                        <input type="submit" class="btn btn-primary" id="submit" value="Sprawdź poprawność" onclick="checkLength(document.getElementById('login'),6,12)"/>
+                        <button id="button-sweet">Wyslij</button>
+                        </form>
+
+                 </div>
+
+             </div>
+             <div id="stopka">&copy; Natalia Pełszyńska
+
+             </div>
+         </div>
+
+         <script>
+            function checkLength(field, min_l, max_l) {
+                var userText = field.value;
+                if(userText.length >= min_l && userText.length <= max_l) return true;
+                else {
+                    document.getElementById('message').innerHTML = "Długość loginu musi wynosić od " + min_l + " do " + max_l + " znaków";
+                    return false;
+                }
+            }
+
+           
+            $('#button-sweet').click(function(){
+                swal("Sukces!", "Twój profil został stworzony!", "success");
+            })
+
+            $('#cancel').click(function(){
+                swal("Rejestracja została anulowana!","Wróć do formularza, w celu ponownej rejestracji", "error");
+            })
+
+        </script>
+
+    </body>
+
+</html>
